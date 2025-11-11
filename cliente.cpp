@@ -46,7 +46,9 @@ ostream &operator<<(ostream& saida, const Pessoas& pessoa){
 	}
 
 
-
+void criarPessoa(){
+	cin >> pessoa
+}
 
 
 int main(){
