@@ -1,0 +1,71 @@
+classDiagram
+direction TB
+    class bone {
+	    +double valor
+	    -int valorEstoque
+	    -int qtd
+    }
+
+    class AbaReta {
+	    -string cor
+	    +void getValor()
+	    +void setValor()
+	    +void getCor()
+	    +void setCor()
+	    friend ostream&amp; operator&lt;&lt;(ostream&amp;, const AbaReta&amp;) ;
+    }
+
+    class Classic {
+	    -int valor
+	    +void getValor()
+    }
+
+    class calcados {
+	    +int tamanho
+	    +string cor
+	    +double valor
+	    -int valorEstoque
+	    -int qtd
+	    +void atualizarValorEstoque()
+    }
+
+    class Tenis {
+	    -string cor
+	    +void getValor()
+	    +void setValor()
+    }
+
+    class Sapato {
+	    +string cor
+	    -int valor
+	    +void getValor()
+    }
+
+    class Pessoas {
+	    -string nome
+	    -int qtdCompras
+	    -bool fiel
+	    -int id
+	    -int qtdClientes
+	    +Pessoas()
+	    +~Pessoas()
+	    +void getPessoas()
+	    +void setNome(string nome)
+	    +void setQtdCompras(int qtdCompras)
+	    +void testeFidelidade()
+	    friend ostream&amp; operator&lt;&lt;(ostream&amp;, const Pessoas&amp;) ;
+    }
+
+    class Cliente {
+	    -int id
+	    +Cliente()
+	    +~Cliente()
+	    +void setID(int id)
+    }
+
+    bone <|-- AbaReta
+    bone <|-- Classic
+    Tenis -- calcados
+    Sapato -- calcados
+    Cliente -- Pessoas
+
