@@ -38,3 +38,6 @@ private:
 
 };
 
+AddBones();
+AttBones();
+REmoveSapatos();

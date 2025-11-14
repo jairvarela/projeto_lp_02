@@ -43,3 +43,14 @@ public:
 
 
 };
+
+
+void CreateCliente(){
+	system("clear");
+	cout<< "Digite o nome do cliente:"<<endl;
+	cin >> 
+
+	cout<< "Escolha uma opção:"<<endl;
+	cout<< "Escolha uma opção:"<<endl;
+	cout<< "Escolha uma opção:"<<endl;
+}

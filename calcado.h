@@ -46,6 +46,9 @@ private:
 
 };
 
+AddSapatos();
+AttSapatos();
+REmoveSapatos();
 
 void CreateCalc(calcados teste){
 	cout<< "O que deseja Adicionar no Estoque?"<< endl;
