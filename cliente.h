@@ -1,56 +1,33 @@
+#pragma once
 
-#include <iostream>
-using namespace std;
+#include "pessoa.h"
 
 
-class Pessoas{
+
+
+
+
+class Clientes : public Pessoas{
 private:
-	string nome;
-	int QtdCompras;
-	bool Fiel;
-	int ID;
-	int qtdClientes;
-	
-
-public:
-
-	Pessoas(){};
-	~Pessoas(){};
-	void getPessoas();
-	void setNome(string nome);
-	void setQtdCompras(int QtdCompras);
-	void TesteFidelidade();
-
-	friend ostream& operator<<(ostream&, const Pessoas&);
-	
-};
-
-
-
-
-
-
-
-class Cliente : public Pessoas{
-private:
-	int ID;
+	int ID=0;
+	// int QtdCompras;
+	// bool Fiel;
+	// int qtdClientes;
 
 
 public:
-	Cliente(){};
-	~Cliente(){};
+	Clientes(){};
+	~Clientes(){};
+
+	void CreateCliente(int ID);
 	void setID(int ID);
-
+	// void getPessoas();
+	// void setNome(string nome);
+	// void setQtdCompras(int QtdCompras);
+	// void TesteFidelidade();
+	friend ostream& operator<<(ostream&, const Clientes&);
 
 };
 
 
-void CreateCliente(){
-	system("clear");
-	cout<< "Digite o nome do cliente:"<<endl;
-	cin >> 
 
-	cout<< "Escolha uma opção:"<<endl;
-	cout<< "Escolha uma opção:"<<endl;
-	cout<< "Escolha uma opção:"<<endl;
-}

@@ -1,71 +1,59 @@
 
 #include <iostream>
 #include "cliente.h"
-using namespace std;
 
 
 
-	void Pessoas::getPessoas(){
-		cout << nome << endl << QtdCompras << endl;
-		if(Fiel == true){
-			cout << "Cliente Fiel, com 10% de desconto" << endl;
-		};
-	}
-
-	void Pessoas::setNome(string nome){
-		this->nome = nome;
-	}
-	void Pessoas::setQtdCompras(int QtdCompras){
-		this->QtdCompras = QtdCompras;
-	}
-	void Pessoas::TesteFidelidade(){
-		if(this->QtdCompras >=3 ){
-			this->Fiel = 1;
-		};
 
 
-	}
+ostream& operator<<(ostream& saida, const Clientes& cliente){
 
-ostream &operator<<(ostream& saida, const Pessoas& pessoa){
-	if(pessoa.Fiel){
-	saida << pessoa.nome + "\n" + to_string(pessoa.QtdCompras) + " Compras feitas." + "\n" + "Cliente Fiel, com 10% de desconto"+ "\n"; 
-	return saida;
-	}
-	saida << pessoa.nome + "\n" + to_string(pessoa.QtdCompras) + "Compras feitas.";
+	saida <<"Nome: " + cliente.getNome() + "\n" + to_string(cliente.getCPF()) + "Compras feitas.";
 	return saida;
 }
 
+// class Clientes : public Pessoas{
+// private:
+// 	int ID=0;
+// 	// int QtdCompras;
+// 	// bool Fiel;
+// 	// int qtdClientes;
 
 
+// public:
+	// Clientes(){};
+	// ~Clientes(){};
 
 
-
-
-	void Cliente::setID(int ID){
-		this->ID = ID;
+	void Clientes::setID(int ID){
+		this->ID = ID+1;
 	}
-
-
-void criarPessoa(){
-	cin >> pessoa
-}
-
-
-int main(){
-
-	int contagem = 0;
-
-	Pessoas Jair;
-
-	Jair.setNome("Jair");
-	Jair.setQtdCompras(3);
-	Jair.TesteFidelidade();
-
-	//Jair.getPessoas();
-
-	cout << Jair;
+		// void getPessoas();
+		// void setNome(string nome);
+		// void setQtdCompras(int QtdCompras);
+		// void TesteFidelidade();
 
 
 
-	return 0;
-}
+
+	void Clientes:: CreateCliente(int ID){
+
+		cout<< "Insira o nome da pessoa: ";
+		string nome;
+		cin>> nome;
+		setNome(nome);
+
+		cout<<"insira o cpf: "<< endl;
+		int cpf;
+		cin>>cpf;
+		setcpf(cpf);
+		setID(ID+1);
+
+
+
+		}
+
+// };
+
+
+
